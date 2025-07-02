@@ -1,0 +1,470 @@
+{
+  "contractName": "IECahoXNFT",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "mintThreeNFTs",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"mintThreeNFTs\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/EcahoXNFTMinter.sol\":\"IECahoXNFT\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/EcahoXNFTMinter.sol\":{\"keccak256\":\"0x17825ec7e97c92face56722515375cfcbd2554f1eaa80b85845b87e338af6573\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6f023f5ad52589d60b423fd53415c29354d40b7c4658b25d360fb03fc1f4009\",\"dweb:/ipfs/QmNzB1ZoCNyo5roPmBtk93viFP8w2fSMf2bXp8SYvvNxqu\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\ninterface IECahoXNFT {\n    function mintThreeNFTs(address to) external;\n}\n\ncontract EcahoXNFTMinter {\n    IECahoXNFT public nftContract;\n\n    constructor(address _nftAddress) {\n        nftContract = IECahoXNFT(_nftAddress);\n    }\n\n    function mint() external {\n        nftContract.mintThreeNFTs(msg.sender);\n    }\n}\n",
+  "sourcePath": "/workspaces/echoX-nft/echoX-nft/contracts/EcahoXNFTMinter.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/EcahoXNFTMinter.sol",
+    "exportedSymbols": {
+      "EcahoXNFTMinter": [
+        34
+      ],
+      "IECahoXNFT": [
+        7
+      ]
+    },
+    "id": 35,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IECahoXNFT",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 7,
+        "linearizedBaseContracts": [
+          7
+        ],
+        "name": "IECahoXNFT",
+        "nameLocation": "68:10:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "6862c0d4",
+            "id": 6,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintThreeNFTs",
+            "nameLocation": "94:13:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "116:2:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6,
+                  "src": "108:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "107:12:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "128:0:0"
+            },
+            "scope": 7,
+            "src": "85:44:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 35,
+        "src": "58:73:0",
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "EcahoXNFTMinter",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 34,
+        "linearizedBaseContracts": [
+          34
+        ],
+        "name": "EcahoXNFTMinter",
+        "nameLocation": "142:15:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "d56d229d",
+            "id": 10,
+            "mutability": "mutable",
+            "name": "nftContract",
+            "nameLocation": "182:11:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 34,
+            "src": "164:29:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IECahoXNFT_$7",
+              "typeString": "contract IECahoXNFT"
+            },
+            "typeName": {
+              "id": 9,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 8,
+                "name": "IECahoXNFT",
+                "nameLocations": [
+                  "164:10:0"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 7,
+                "src": "164:10:0"
+              },
+              "referencedDeclaration": 7,
+              "src": "164:10:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IECahoXNFT_$7",
+                "typeString": "contract IECahoXNFT"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 21,
+              "nodeType": "Block",
+              "src": "233:54:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 19,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 15,
+                      "name": "nftContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "243:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IECahoXNFT_$7",
+                        "typeString": "contract IECahoXNFT"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 17,
+                          "name": "_nftAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 12,
+                          "src": "268:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 16,
+                        "name": "IECahoXNFT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "257:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IECahoXNFT_$7_$",
+                          "typeString": "type(contract IECahoXNFT)"
+                        }
+                      },
+                      "id": 18,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "257:23:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IECahoXNFT_$7",
+                        "typeString": "contract IECahoXNFT"
+                      }
+                    },
+                    "src": "243:37:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IECahoXNFT_$7",
+                      "typeString": "contract IECahoXNFT"
+                    }
+                  },
+                  "id": 20,
+                  "nodeType": "ExpressionStatement",
+                  "src": "243:37:0"
+                }
+              ]
+            },
+            "id": 22,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 12,
+                  "mutability": "mutable",
+                  "name": "_nftAddress",
+                  "nameLocation": "220:11:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22,
+                  "src": "212:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:21:0"
+            },
+            "returnParameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:0"
+            },
+            "scope": 34,
+            "src": "200:87:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 32,
+              "nodeType": "Block",
+              "src": "318:54:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 28,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967281,
+                          "src": "354:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 29,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "358:6:0",
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "354:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 25,
+                        "name": "nftContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "328:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IECahoXNFT_$7",
+                          "typeString": "contract IECahoXNFT"
+                        }
+                      },
+                      "id": 27,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "340:13:0",
+                      "memberName": "mintThreeNFTs",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6,
+                      "src": "328:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address) external"
+                      }
+                    },
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "328:37:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "328:37:0"
+                }
+              ]
+            },
+            "functionSelector": "1249c58b",
+            "id": 33,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "302:4:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "306:2:0"
+            },
+            "returnParameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "318:0:0"
+            },
+            "scope": 34,
+            "src": "293:79:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 35,
+        "src": "133:241:0",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "32:343:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-05-01T16:10:39.277Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

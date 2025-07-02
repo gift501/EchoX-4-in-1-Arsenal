@@ -1,5 +1,6 @@
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+const path = require("path");
 
 module.exports = {
   networks: {
@@ -12,15 +13,27 @@ module.exports = {
           shareNonce: true,
           pollingInterval: 8000
         }),
-      network_id: 421614, // Correctly placed here
+      network_id: 421614,
       confirmations: 2,
-      timeoutBlocks: 200,
+      timeoutBlocks: 500,
       skipDryRun: true
     }
   },
+
+  contracts_directory: "./contracts",
+  contracts_build_directory: "./build/contracts",
+
   compilers: {
     solc: {
-      version: "0.8.20"
+      version: "0.8.20",
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 100000
+        },
+        // Change this line to true
+        viaIR: true // This line has been corrected
+      }
     }
   }
 };
